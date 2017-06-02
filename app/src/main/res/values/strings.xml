@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Protocolos CEU</string>
+    <string name="title_activity_cadastro">Sign in</string>
+
+    <!-- Departamentos -->
+    <string name="info">Informática</string>
+    <string name="cc">Conselho Curador</string>
+    <string name="ca">Conselho Administrativo</string>
+    <string name="cf">Consleho Fiscal</string>
+
+    <!-- cadastro -->
+    <string name="cadastrar">Cadastrar</string>
+    <string name="tela_cad">Cadastro</string>
+    <string name="cadastro_vazio">Preencha todos os campos para realizar cadastro</string>
+
+    <!-- login -->
+    <string name="entrar">Entrar</string>
+    <string name="conta_nova">Criar Uma Conta</string>
+    <string name="esco_dep">Escolha o departamento</string>
+    <string name="ler_prot">Ler Protocolos</string>
+    <string name="login_vazio">Preencha todos os campos para fazer login</string>
+    <string name="lg_email_errado">Email não cadastrado</string>
+    <string name="lg_senha_errada">Senha incorreta</string>
+
+    <!-- edit texts de cadastro -->
+    <string name="nome">Nome e Sobrenome</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="quarto">Quarto</string>
+
+    <!-- Tela de escrita do protocolo -->
+    <string name="assunto">Assunto</string>
+    <string name="texto">Corpo Protocolo</string>
+    <string-array name="deps">
+        <item>Conselho Curador</item>
+        <item>Conselho Fiscal</item>
+        <item>Conselho Administrativo</item>
+        <item>Informtica</item>
+    </string-array>
+    <string name="enviar">Enviar</string>
+    <string name="spinner_titulo">Escolha o Departamento</string>
+
+</resources>
