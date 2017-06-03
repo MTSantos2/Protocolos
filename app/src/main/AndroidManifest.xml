@@ -27,7 +27,8 @@
             android:label="@string/title_activity_cadastro" />
         <activity android:name=".Activities.Protocolos" />
         <activity android:name=".Activities.EscreveProtocolo" />
-        <activity android:name=".Activities.EscreveProtActivity"></activity>
+        <activity android:name=".Activities.EscreveProtActivity" />
+        <activity android:name=".Activities.ProtocoloSelecionado"></activity>
     </application>
 
 </manifest>

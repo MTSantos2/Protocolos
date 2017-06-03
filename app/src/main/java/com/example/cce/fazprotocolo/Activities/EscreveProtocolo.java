@@ -1,6 +1,7 @@
 package com.example.cce.fazprotocolo.Activities;
 
 import android.content.Context;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,13 +22,12 @@ import java.util.Calendar;
 
 public class EscreveProtocolo extends AppCompatActivity {
 
-    Context context;
     private View mainContent;
     private Button button;
     private TextInputEditText edAssunto;
     private TextInputEditText edCorpo;
     private modeloProtocolos protocolo;
-    private Serializable m;
+    private Serializable moradorSerializable;
     String dep = "";
     Spinner deps;
 
@@ -43,10 +43,7 @@ public class EscreveProtocolo extends AppCompatActivity {
     }
 
     private void setActions(){
-        //recebe da activity de login qual o usuário logado
-//        Bundle data = getIntent().getExtras();
-//        morador =  data.getSerializable("Morador logado");
-        m = (Morador) getIntent().getSerializableExtra("Morador logado");
+        moradorSerializable = (Morador) getIntent().getSerializableExtra("Morador logado");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,12 +51,16 @@ public class EscreveProtocolo extends AppCompatActivity {
                 String assunto = edAssunto.getText().toString();
                 String corpo = edCorpo.getText().toString();
                 if( !assunto.isEmpty() && !corpo.isEmpty()){
-                    Morador morador = (Morador) m;
-                    Toast.makeText(context, morador.toString(), Toast.LENGTH_SHORT).show();
-//                    long id = Calendar.getInstance().getTimeInMillis();
-//                    protocolo = new modeloProtocolos(id, assunto, morador, corpo );
-//                    new Firebase().SalvaProtocolo(protocolo, id);
+                    Morador morador = (Morador) moradorSerializable;
+                    //Toast.makeText(EscreveProtocolo.this, morador.toString(), Toast.LENGTH_LONG).show();
+                    long id = Calendar.getInstance().getTimeInMillis();
+                    protocolo = new modeloProtocolos(id, assunto, morador, corpo );
+                    new Firebase().SalvaProtocolo(protocolo, id);
+                    finish();
                 }else{
+                    Snackbar.make(mainContent,getText(R.string.campo_vazio),Snackbar.LENGTH_SHORT)
+                            .setAction("",null)
+                            .show();
                 }
 
             }

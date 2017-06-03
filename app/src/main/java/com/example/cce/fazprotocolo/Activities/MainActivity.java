@@ -79,11 +79,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToEscreveProtocolos(Morador morador){
         Intent intent = new Intent(MainActivity.this, EscreveProtocolo.class);
-        startActivity(intent);
         Bundle extras = new Bundle();
         //Envia a informação de qual usuário se logou para a próxima activity
         extras.putSerializable("Morador logado", morador);
         intent.putExtras(extras);
+        startActivity(intent);
         finish();
     }
 
@@ -125,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
                             .setAction("",null)
                             .show();
                     i = lista.size();
-
                 }
             }else{
                 //Mensagem de erro caso email esteja incorreto

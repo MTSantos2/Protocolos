@@ -28,9 +28,13 @@
     <string name="senha">Senha</string>
     <string name="quarto">Quarto</string>
 
+    <!-- Tela de leitura do protocolo selecionado -->
+    <string name="morador">Morador:  </string>
+
     <!-- Tela de escrita do protocolo -->
+    <string name="campo_vazio">Preencha todos os campos para enviar o protocolo</string>
     <string name="assunto">Assunto</string>
-    <string name="texto">Corpo Protocolo</string>
+    <string name="texto">Texto</string>
     <string-array name="deps">
         <item>Conselho Curador</item>
         <item>Conselho Fiscal</item>

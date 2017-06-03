@@ -4,7 +4,9 @@ package com.example.cce.fazprotocolo.tipos;
 
 import com.example.cce.fazprotocolo.tipos.Morador;
 
-public class modeloProtocolos {
+import java.io.Serializable;
+
+public class modeloProtocolos implements Serializable {
 
     //Propriedades dos protocolos
     private Long id;
