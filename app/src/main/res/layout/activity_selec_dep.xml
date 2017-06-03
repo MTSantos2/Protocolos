@@ -10,16 +10,16 @@
         android:id="@+id/Logo"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/logoprotocolos"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="32dp" />
 
     <TextView
         android:id="@+id/TextPrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"    
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="@string/esco_dep"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:textColor="@color/Preto" />
